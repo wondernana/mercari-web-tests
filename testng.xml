@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="Mercari-web-tests">
+        <classes>
+            <class name="tests.AddNewAddressTest">
+                <parameter name="email" value="test@example.com"/>
+                <parameter name="password" value="secret"/>
+                <methods>
+                    <include name="login"/>
+                    <include name="testNewAddressAddition"/>
+                </methods>
+            </class>
+            <class name="tests.SearchBarTest">
+                <parameter name="request" value="MacBook"/>
+                <methods>
+                    <include name="validateSearchResults"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
